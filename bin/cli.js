@@ -4,7 +4,7 @@ var fs = require('fs'),
     tty = require('tty'),
     statik = require('./../lib/node-static');
 
-    var argv = require('optimist')
+    var argv = require('yargs')
         .usage([
             'USAGE: $0 [-p <port>] [<directory>]',
             'simple, rfc 2616 compliant file streaming module for node']

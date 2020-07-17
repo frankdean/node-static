@@ -26,16 +26,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "optimist": ">=0.3.4",
     "colors": ">=0.6.0",
-    "mime": "^1.2.9"
+    "mime": "^1.2.9",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
     "request": "latest",
     "vows": "latest"
   },
-  "version": "0.7.12-rc.1",
+  "version": "0.7.12-rc.2",
   "engines": {
     "node": ">= 0.4.1"
   },
