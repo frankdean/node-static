@@ -96,6 +96,22 @@ suite.addBatch({
     }
 })
 .addBatch({
+  'requesting a forbidden URI /%00': {
+    topic : function(){
+      request.get(TEST_SERVER + '/%00', this.callback);
+    },
+    'should respond with 403' : function(error, response, body){
+      assert.equal(response.statusCode, 403);
+    },
+    'should respond without content-type header': function(error, response, body){
+      assert.isUndefined(response.headers['content-type']);
+    },
+    'should respond with empty body': function(error, response, body){
+      assert.isEmpty(body);
+    }
+  }
+})
+.addBatch({
   'serving empty.css': {
     topic : function(){
       request.get(TEST_SERVER + '/empty.css', this.callback);
